@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         int[] buhBook = generateBuhBook();
         System.out.println(Arrays.toString(buhBook));
-        getTotalSpending(buhBook);          // task1
+        System.out.println("Сумма трат за месяц составила " + getTotalSpending(buhBook) + " рублей");// task1
         printMinMaxSpending(buhBook);       // task2
         averageSpending(buhBook);           // task3
         task4();
@@ -29,7 +29,6 @@ public class Main {
         for (int monthCost : arr) {
             totalSpending += monthCost;
         }
-        System.out.println("Сумма трат за месяц составила " + totalSpending + " рублей");
         return totalSpending;
     }
 
@@ -51,7 +50,7 @@ public class Main {
 
     private static void averageSpending(int[] arr) {
         long totalSpending = getTotalSpending(arr);
-        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей\n", (double)totalSpending / arr.length);
+        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей%n", (double)totalSpending / arr.length);
     }
 
     private static void task4() {
